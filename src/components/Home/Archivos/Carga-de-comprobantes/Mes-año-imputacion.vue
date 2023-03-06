@@ -1,19 +1,15 @@
 <template>
-    <div>
+    <el-card>
         <el-header>
-            <h2> Ingrese mes/año de imputación que se utilizará para los comprobantes que se ingresarán al sistema.</h2>
+            <h4> Ingrese mes/año de imputación que se utilizará para los comprobantes que se ingresarán al sistema.</h4>
         </el-header>
-    </div>
-    <div>
-        <h2>Mes/Año de la imputación: <input placeholder="11-2022" v-model="input"/></h2>
-        <el-col :span="6"><div class="grid-content bg-purple"><el-button>Seguir</el-button></div></el-col>
-        
-    </div>
-    
 
+        <h4>Mes/Año de la imputación: <input placeholder="11-2022"/></h4>
+        <el-col ><div><el-button>Seguir</el-button></div></el-col>
+    </el-card>        
 </template>
 
-<script>
+<script>    
 
 export default {
     name: 'TiempoImpuestosMesAOImputacion',
@@ -33,6 +29,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

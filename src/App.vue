@@ -1,12 +1,17 @@
 <script setup>
 import HelloWorld from './components/Impuestos.vue'
 import MesAñoImputacionVue from './components/Home/Archivos/Carga-de-comprobantes/Mes-año-imputacion.vue';
+import ModalDeLiquidacionDelIVA from './views/liquidacionDelIVA/components/ModalDeLiquidacionDelIVA.vue';
+import liquidacionDelIVA from './views/liquidacionDelIVA/liquidacionDelIVA.vue';
+import LiquidacionDelIVAFecha from './views/liquidacionDelIVA/components/LiquidacionDelIVAFecha.vue';
+import datosDelPeriodoFiscalAnterior from './views/personaFisica/datosDelPeriodoFiscalAnterior.vue';
+import ModalDatosDelPeriodo from './views/personaFisica/ModalDatosDelPeriodo.vue';
 </script>
 
 <template>
   <div>
   </div>
-  <MesAñoImputacionVue />
+  <ModalDatosDelPeriodo />
 </template>
 
 <style scoped>

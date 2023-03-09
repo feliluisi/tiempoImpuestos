@@ -6,26 +6,27 @@
             de la declaracion jurada anterior.
         </div>
         <el-col justify="center">
-            <div class="block">Año fiscal:
-                <el-date-picker v-model="value4" type="year" placeholder="Año">
+            <span class="block">Año fiscal:
+                <el-date-picker class="yearpickerclass" v-model="inputs.año" type="year" placeholder="Año">
                 </el-date-picker>
-            </div>
+            </span>
         </el-col>
-        <el-row :gutter="20">
-            <el-col justify="center">Capital Afectado a la actividad
-                <div>Bienes de cambio
-                    <el-input-number controls-position="right" v-model="bienes" :precision="2" :step="0.1" :min="1" />
-                </div>
-                <div>Total del activo
-                    <el-input-number controls-position="right" v-model="activo" :precision="2" :step="0.1" :min="1" />
-                </div>
-                <div>Total del pasivo
-                    <el-input-number controls-position="right" v-model="pasivo" :precision="2" :step="0.1" :min="1" />
-                </div>
-            </el-col>
-        </el-row>
+        <el-form :label-position="labelPosition" label-width="350px" :model="formLabelAlign">
+            <el-form-item class="modaldatosperiododivisor" label="Bienes de cambio">
+                <el-input-number controls-position="right" class="inputnumberclass" v-model="inputs.bienes" :precision="2"
+                    :step="0.1" :min="0" />
+            </el-form-item>
+            <el-form-item class="modaldatosperiododivisor" label="Total del activo">
+                <el-input-number controls-position="right" class="inputnumberclass" v-model="inputs.activo" :precision="2"
+                    :step="0.1" :min="0" />
+            </el-form-item>
+            <el-form-item class="modaldatosperiododivisor" label="Total del pasivo">
+                <el-input-number controls-position="right" class="inputnumberclass" v-model="inputs.pasivo" :precision="2"
+                    :step="0.1" :min="0" />
+            </el-form-item>
+        </el-form>
         <div>
-            <el-button type="default" size="default" >Declaracion de bienes y deudas...</el-button>
+            <el-button type="default" size="default">Declaracion de bienes y deudas...</el-button>
         </div>
         <div class="divisorbutton">
             <el-button>Procesar</el-button>
@@ -40,11 +41,14 @@ export default {
 
     data() {
         return {
-            value4: '',
-            bienes: '',
-            activo: '',
-            pasivo: '',
+            inputs: {
+                bienes: '0',
+                activo: '0',
+                pasivo: '0',
+                año: '0',
+            },
 
+            labelPosition: 'right',
         };
     },
 
@@ -62,12 +66,14 @@ export default {
 .elcardFiscalAnterior {
     max-width: 800px;
 }
+
 .divisor2 {
     margin-bottom: 1%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
 .divisorbutton {
     margin-bottom: 1%;
     display: flex;
@@ -75,4 +81,19 @@ export default {
     justify-content: space-around;
 
 }
-</style>
+
+.modaldatosperiododivisor {
+    margin-bottom: 1%;
+    width: 600px;
+    margin-top: 1%;
+}
+
+.inputnumberclass {
+    border: solid 1.5px #C0C0C0;
+    background-color: #C0C0C0;
+}
+
+.yearpickerclass {
+    border: #C0C0C0;
+    background-color: #C0C0C0;
+}</style>

@@ -6,12 +6,13 @@ import liquidacionDelIVA from './views/liquidacionDelIVA/liquidacionDelIVA.vue';
 import LiquidacionDelIVAFecha from './views/liquidacionDelIVA/components/LiquidacionDelIVAFecha.vue';
 import datosDelPeriodoFiscalAnterior from './views/personaFisica/datosDelPeriodoFiscalAnterior.vue';
 import ModalDatosDelPeriodo from './views/personaFisica/ModalDatosDelPeriodo.vue';
+import resImpositivoPersFisica from './views/personaFisica/resImpositivoPersFisica.vue';
 </script>
 
 <template>
   <div>
   </div>
-  <ModalDatosDelPeriodo />
+  <resImpositivoPersFisica />
 </template>
 
 <style scoped>
